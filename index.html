@@ -42,6 +42,7 @@ if(yy<1900) yy = yy+1900;
 {var today;today = new Date();document.getElementById("localtime").innerHTML = showLocale(today);window.setTimeout("tick()", 1000);}
 tick();</script>
 </center>
+
 <div data-role="navbar">
 </ul>
 <div data-role="navbar">
@@ -56,85 +57,15 @@ tick();</script>
 <hr width=100%>
 </div>
 
- <CENTER><TEXTAREA ROWS=? COLS=?>以下是你的访问次数、以及总人数访问量、</TEXTAREA></CENTER>
+ <CENTER><TEXTAREA ROWS=? COLS=?>这里是、尚洪工作室，以下是访问量次数，以及总人数</TEXTAREA></CENTER>
 
-<center>
-<script type="text/javascript">
-var caution=false
-function setCookie(name,value,expires,path,domain,secure)
-{
-  var curCookie=name+"="+escape(value) +
-  ((expires)?";expires="+expires.toGMTString() : "") +
-  ((path)?"; path=" + path : "") +
-  ((domain)? "; domain=" + domain : "") +
-  ((secure)?";secure" : "")
-  if(!caution||(name + "=" + escape(value)).length <= 4000)
-  {
-    document.cookie = curCookie
-  }
-  else if(confirm("Cookie exceeds 4KB and will be cut!"))
-  {
-    document.cookie = curCookie
-  }
-}
-function getCookie(name)
-{
-  var prefix = name + "="
-  var cookieStartIndex = document.cookie.indexOf(prefix)
-  if (cookieStartIndex == -1)
-  {
-    return null
-  }
-  var cookieEndIndex=document.cookie.indexOf(";",cookieStartIndex+prefix.length)
-  if(cookieEndIndex == -1)
-  {
-    cookieEndIndex = document.cookie.length
-  }
-  return unescape(document.cookie.substring(cookieStartIndex+prefix.length,cookieEndIndex))
-}
-function deleteCookie(name, path, domain)
-{
-  if(getCookie(name))
-  {
-    document.cookie = name + "=" +
-    ((path) ? "; path=" + path : "") +
-    ((domain) ? "; domain=" + domain : "") +
-    "; expires=Thu, 01-Jan-70 00:00:01 GMT"
-  }
-}
-function fixDate(date)
-{
-  var base=new Date(0)
-  var skew=base.getTime()
-  if(skew>0)
-  {
-    date.setTime(date.getTime()-skew)
-  }
-}
-var now=new Date()
-fixDate(now)
-now.setTime(now.getTime()+365 * 24 * 60 * 60 * 1000)
-var visits = getCookie("counter")
-if(!visits)
-{
-  visits=1;
-}
-else
-{
-  visits=parseInt(visits)+1;
-}
-setCookie("counter", visits, now)
-document.write("———〔 您是到访的第: " + visits + " 次用户 〕———")
-</script>
-</center>
-
-<hr width="100%">
 <center>
 <script async src="https://api.ly522.com/js/jilei.pure.mini.js"></script>
 <span id="jilei_container_site_pv">网站总访问量<span id="jilei_value_site_pv"></span>次</span>
 <span class="post-meta-divider">|</span>
 <span id="jilei_container_site_uv">本站访客数<span id="jilei_value_site_uv"></span>人</span></p>
 </center>
+
 <hr width="100%">
 
 <center>
