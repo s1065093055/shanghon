@@ -49,6 +49,27 @@ tick();</script>
 
 </pre>
 <center>温馨提示、安全检查中，缓冲100%过后进入主页</center>
+ <pre>
+ </pre>
+    <center>  
+    </head>
+    <body>
+        <div id="box"></div>
+        <script type="text/javascript">
+            function setStorage(){
+                if(localStorage.counter){
+                    localStorage.counter=Number(localStorage.counter)+1;
+                }else{
+                    localStorage.counter=1;
+                }
+                return localStorage.counter;
+            }
+            var counter=setStorage();
+            var oBox=document.getElementById('box');
+            oBox.innerHTML="已为您安全检查通过: "+counter+"次";            
+        </script>
+        </center>
+         
 
 <SCRIPT type=text/javascript>
 <!--
